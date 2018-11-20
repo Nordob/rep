@@ -1,0 +1,28 @@
+.title
+  position: relative
+  margin: 0 auto 60px
+  width: 115px
+  color: $color-title
+  font-size: 60px
+  font-weight: 400
+  line-height: 28.43px
+  font-family: $font-family-second
+
+  &::before
+    content: ""
+    position: absolute
+    left: -145px
+    width: 109px
+    height: 40px
+    display: block
+    background: url("left_title.png") no-repeat
+
+  &::after
+    content: ""
+    position: absolute
+    right: -145px
+    top: 0
+    width: 109px
+    height: 40px
+    display: block
+    background: url("right_title.png") no-repeat

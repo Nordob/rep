@@ -1,0 +1,125 @@
+.product
+  display: flex
+  width: 263px
+  flex-direction: column
+  box-shadow: 0 4px 29px rgba(0, 0, 0, 0.08)
+  border-radius: 10px
+  background-color: #ffffff
+
+  &__photo
+    height: 228px
+
+  &__image
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  &__block
+    padding: 29px 35px 38px 35px
+
+  &__name
+    display: flex
+    justify-content: center
+    margin-bottom: 24px
+    font-family: $font-family-fifth
+    font-size: 20px
+    font-weight: 700
+    line-height: 28.43px
+
+  &__info
+    display: flex
+    justify-content: center
+    margin-bottom: 26px
+    font-size: 12px
+    font-weight: 300
+    line-height: 20px
+
+  &__description
+
+    &:nth-child(1)
+      border-right: 1px solid #000000
+      padding-right: 6px
+
+    &:nth-child(2)
+      border-right: 1px solid #000000
+      padding: 0 6px
+
+    &:nth-child(3)
+      padding-left: 6px
+
+  &__order
+    display: flex
+    justify-content: space-between
+    margin-bottom: 29px
+
+  &__price
+    font-size: 22px
+    line-height: 28.43px
+    font-family: $font-family-fourth
+    font-weight: 700
+
+  &__item
+    width: 31px
+    text-align: center
+    border: none
+    outline: none
+    font-size: 14px
+    font-weight: 400
+
+  &__quantity
+    display: flex
+    max-width: 63px
+
+  &__button
+    display: flex
+    width: fit-content
+    padding: 11px 31px
+    border: 1px solid transparent
+    border-radius: 5px
+    background-color: $color-button
+    color: #ffffff
+    font-size: 14px
+    font-weight: 400
+    line-height: 28.43px
+    text-transform: uppercase
+    letter-spacing: 0.7px
+    text-decoration: none
+    align-items: center
+    outline: none
+    transition: 0.5s
+
+    svg
+      width: 22px
+      height: 20px
+      margin-left: 22px
+
+      path
+        color: #ffffff
+        transition: 0.5s
+
+    &:hover
+      background-color: #ffffff
+      color: $color-button
+      border-color: $color-button
+
+      path
+        color: $color-button
+
+
+
+  &__less,
+  &__more
+    margin: auto 0
+    border: 1px solid #808080
+    background: #ffffff
+    width: 13px
+    height: 13px
+    border-radius: 50%
+    vertical-align: middle
+    line-height: 0px
+    color: #808080
+    outline: none
+
+  &__more
+    line-height: 1px
+

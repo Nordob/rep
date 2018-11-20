@@ -2,6 +2,10 @@ import './404';
 import initHome from './home';
 
 export default () => {
-  console.log('init pages');
-  initHome();
+
+  const $home = $('.home');
+  if($home.length) {
+    initHome($home);
+  }
+
 };
