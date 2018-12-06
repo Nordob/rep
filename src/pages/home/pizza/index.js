@@ -4,5 +4,4 @@ import 'blocks/veg/veg.sass'
 
 export default $root => {
 
-
 };
