@@ -62,15 +62,19 @@ export default $root => {
     price = parseInt(price, 10);
     if(input == 1) {
       input++;
+      price = price - priceProduct;
       price = input * price;
+      price = price + priceProduct;
       price = price + " руб.";
       $(this).prev('.product__input').val(input);
       $(this).parent('.product__quantity').prev('.product__price').replaceWith('<div class="product__price">' + price + '</div>');
     } else {
       console.log(1);
+      price = price - priceProduct;
       startingPrice = price/input;
       input++;
       price = startingPrice*input;
+      price = price + priceProduct;
       price = price + " руб.";
       $(this).prev('.product__input').val(input);
       $(this).parent('.product__quantity').prev('.product__price').replaceWith('<div class="product__price">' + price + '</div>');
@@ -84,9 +88,11 @@ export default $root => {
     if(input == 1) {
       console.log(1);
     } else {
+      price = price - priceProduct;
       startingPrice = price/input;
       input--;
       price = startingPrice*input;
+      price = price + priceProduct;
       price = price + " руб.";
       $(this).next('.product__input').val(input);
       $(this).parent('.product__quantity').prev('.product__price').replaceWith('<div class="product__price">' + price + '</div>');
@@ -159,10 +165,13 @@ export default $root => {
   $root.find(".product__cancellation").on('click', function (e) {
     $(this).prev(".product__howmuches").replaceWith('<div class="product__howmuches">' + "+0" + '</div>');
     $(this).parent(".product__howmuch").next(".product__pricetag").find('span').text("0");
+    price = $(this).parent(".product__howmuch").parent(".product__settings").parent(".product__supplements").parent(".product__block").find(".product__price").text().replace(/[^0-9]/gi, '');
+    price = parseInt(price, 10);
+    price = price - priceProduct;
+    $(this).parent(".product__howmuch").parent(".product__settings").parent(".product__supplements").parent(".product__block").find(".product__price").replaceWith('<div class="product__price">' + price + " руб." + '</div>');
     priceProduct = 0;
     valhowmuch = 0;
+
   })
-
-
 
 };

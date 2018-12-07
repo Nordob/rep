@@ -1,3 +1,5 @@
+include /blocks/product/index
+
 .sets
   .container
     .sets__content
@@ -5,180 +7,71 @@
       .slider__slider
         .swiper-container.swiper__section
           .swiper-wrapper.slider__wrapper
-            .swiper-slide.slider__slide
-              .product
-                .hit
-                  p хит
-                .product__photo
-                  img(class="product__image" src='images/backgraund-product1.png' alt='')
-                .product__block
-                  .product__name
-                    | Сет №10
-                  .product__info
-                    .product__size 72 шт.
-                    .product__weight 1560 г.
-                    .product__calories 1700 Kkal
-                  .product__order
-                    .product__price
-                      | 2050 руб.
-                    .product__quantity
-                      button.product__less -
-                      input.product__input(value=1 disabled=true)
-                      button.product__more +
-                  button.product__button( type="button")
-                    | В корзину
-                    svg.svg-inline--fa.fa-shopping-cart.fa-w-18(aria-hidden='true', data-prefix='fas',
-                    data-icon='shopping-cart', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 576 512')
-                      path(fill='currentColor', d='M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99' +
-                      ' 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255' +
-                      ' 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56' +
-                      ' 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0' +
-                      ' 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.' +
-                      '413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z')
-  
-            .swiper-slide.slider__slide
-              .product
-                .product__photo
-                  img(class="product__image" src='images/backgraund-product2.png' alt='')
-                .product__block
-                  .product__name
-                    | Сет №8
-                  .product__info
-                    .product__size 24 шт.
-                    .product__weight 960 г.
-                    .product__calories 800 Kkal
-                  .product__order
-                    .product__price
-                      | 1590 руб.
-                    .product__quantity
-                      button.product__less -
-                      input.product__input(value=1 disabled=true)
-                      button.product__more +
-                  button.product__button( type="button" href="#")
-                    | В корзину
-                    svg.svg-inline--fa.fa-shopping-cart.fa-w-18(aria-hidden='true', data-prefix='fas',
-                    data-icon='shopping-cart', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 576 512')
-                      path(fill='currentColor', d='M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99' +
-                      ' 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255' +
-                      ' 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56' +
-                      ' 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0' +
-                      ' 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.' +
-                      '413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z')
-            .swiper-slide.slider__slide
-              .product
-                .product__photo
-                  img(class="product__image" src='images/backgraund-product3.png' alt='')
-                .product__block
-                  .product__name
-                    | Минисет №5
-                  .product__info
-                    .product__size 14 шт.
-                    .product__weight 450 г.
-                    .product__calories 400 Kkal
-                  .product__order
-                    .product__price
-                      | 510 руб.
-                    .product__quantity
-                      button.product__less -
-                      input.product__input(value=1 disabled=true)
-                      button.product__more +
-                  button.product__button( type="button" href="#")
-                    | В корзину
-                    svg.svg-inline--fa.fa-shopping-cart.fa-w-18(aria-hidden='true', data-prefix='fas',
-                    data-icon='shopping-cart', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 576 512')
-                      path(fill='currentColor', d='M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99' +
-                      ' 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255' +
-                      ' 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56' +
-                      ' 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0' +
-                      ' 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.' +
-                      '413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z')
-            .swiper-slide.slider__slide
-              .product
-                .veg
-                  p veg
-                .product__photo
-                  img(class="product__image" src='images/backgraund-product4.png' alt='')
-                .product__block
-                  .product__name
-                    | Сет №6
-                  .product__info
-                    .product__size 16 шт.
-                    .product__weight 460 г.
-                    .product__calories 490 Kkal
-                  .product__order
-                    .product__price
-                      | 400 руб.
-                    .product__quantity
-                      button.product__less -
-                      input.product__input(value=1 disabled=true)
-                      button.product__more +
-                  button.product__button( type="button" href="#")
-                    | В корзину
-                    svg.svg-inline--fa.fa-shopping-cart.fa-w-18(aria-hidden='true', data-prefix='fas',
-                    data-icon='shopping-cart', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 576 512')
-                      path(fill='currentColor', d='M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99' +
-                      ' 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255' +
-                      ' 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56' +
-                      ' 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0' +
-                      ' 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.' +
-                      '413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z')
-            .swiper-slide.slider__slide
-              .product
-                .product__photo
-                  img(class="product__image" src='images/backgraund-product4.png' alt='')
-                .product__block
-                  .product__name
-                    | Сет №6
-                  .product__info
-                    .product__size 16 шт.
-                    .product__weight 460 г.
-                    .product__calories 490 Kkal
-                  .product__order
-                    .product__price
-                      | 400 руб.
-                    .product__quantity
-                      button.product__less -
-                      input.product__input(value=1 disabled=true)
-                      button.product__more +
-                  button.product__button( type="button" href="#")
-                    | В корзину
-                    svg.svg-inline--fa.fa-shopping-cart.fa-w-18(aria-hidden='true', data-prefix='fas',
-                    data-icon='shopping-cart', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 576 512')
-                      path(fill='currentColor', d='M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99' +
-                      ' 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255' +
-                      ' 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56' +
-                      ' 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0' +
-                      ' 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.' +
-                      '413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z')
-            .swiper-slide.slider__slide
-              .product
-                .product__photo
-                  img(class="product__image" src='images/backgraund-product2.png' alt='')
-                .product__block
-                  .product__name
-                    | Сет №8
-                  .product__info
-                    .product__size 24 шт.
-                    .product__weight 960 г.
-                    .product__calories 800 Kkal
-                  .product__order
-                    .product__price
-                      | 1590 руб.
-                    .product__quantity
-                      button.product__less -
-                      input.product__input(value=1 disabled=true)
-                      button.product__more +
-                  button.product__button( type="button" href="#")
-                    | В корзину
-                    svg.svg-inline--fa.fa-shopping-cart.fa-w-18(aria-hidden='true', data-prefix='fas',
-                    data-icon='shopping-cart', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 576 512')
-                      path(fill='currentColor', d='M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99' +
-                      ' 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255' +
-                      ' 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56' +
-                      ' 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0' +
-                      ' 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.' +
-                      '413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z')
-            |         ...
+            -
+              var sets = [
+                {
+                  hit: 'true',
+                  icon: 'images/backgraund-product1.png',
+                  title: 'Сет №10',
+                  name: 'Сет №10',
+                  size: '72 шт.',
+                  weight: '1560',
+                  calories: '1700',
+                  price: '2050'
+                },
+                {
+                  icon: 'images/backgraund-product2.png',
+                  title: 'Сет №8',
+                  name: 'Сет №8',
+                  size: '24 шт.',
+                  weight: '960',
+                  calories: '800',
+                  price: '1590'
+                },
+                {
+                  icon: 'images/backgraund-product3.png',
+                  title: 'Минисет №5',
+                  name: 'Минисет №5',
+                  size: '14 шт.',
+                  weight: '450',
+                  calories: '400',
+                  price: '510'
+                },
+                {
+                  veg: 'true',
+                  icon: 'images/backgraund-product4.png',
+                  title: 'Сет №6',
+                  name: 'Сет №6',
+                  size: '16 шт.',
+                  weight: '460',
+                  calories: '490',
+                  price: '400'
+                },
+                {
+                  veg: 'true',
+                  icon: 'images/backgraund-product4.png',
+                  title: 'Сет №6',
+                  name: 'Сет №6',
+                  size: '16 шт.',
+                  weight: '460',
+                  calories: '490',
+                  price: '400'
+                },
+                {
+                  icon: 'images/backgraund-product2.png',
+                  title: 'Сет №8',
+                  name: 'Сет №8',
+                  size: '24 шт.',
+                  weight: '960',
+                  calories: '800',
+                  price: '1590'
+                }
+              ]
+
+            each set in sets
+              .swiper-slide.slider__slide
+                +productCard(set)
+
           // If we need pagination
           .swiper-pagination
           // If we need navigation buttons
