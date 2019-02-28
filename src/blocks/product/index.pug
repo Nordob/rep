@@ -1,5 +1,11 @@
 mixin productCard(product)
-  .product
+  .product(data-price=product.price)
+    if product.new
+      .new
+        p new
+    if product.actions
+      .actions
+        p Акция
     if product.veg
       .veg
         p veg
@@ -15,7 +21,9 @@ mixin productCard(product)
           .product__settings
             | Добавить:
             .product__howmuch
-              .product__howmuches +0
+              .product__howmuches
+                | +
+                span 0
               button.product__cancellation x
             .product__pricetag
               .product__pricetags
@@ -32,7 +40,9 @@ mixin productCard(product)
         if product.calories
           .product__calories #{product.calories} Kkal
       .product__order
-        .product__price #{product.price} руб.
+        div
+          span.product__price= product.price
+          span.product__price-valute руб.
         .product__quantity
           button.product__less -
           input.product__input(value=1 disabled=true)

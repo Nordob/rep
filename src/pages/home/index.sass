@@ -1,5 +1,5 @@
 .swiper__section
-  margin: 60px 0 68px
+  margin: 60px 0 0 0
   padding-bottom: 68px
 
 .intro
@@ -180,10 +180,11 @@
 .rolls,
 .sets,
 .pizza,
-.wok
+.wok,
+.action
 
   &__content
-    margin: 90px 0 40px
+    margin: 70px 0 40px
 
 
   &__prev
@@ -221,3 +222,36 @@
 
   .swiper-pagination-bullet
     margin: 0 11px!important
+
+.action
+  background: url("bg_new.png") no-repeat
+  background-position: 50%
+
+  .container
+    padding: 50px 0 80px
+
+  .swiper__section
+    margin: 40px 0 0 0
+
+//.action__tabs
+//  display: none
+//
+//  &.active
+//    display: block
+
+.action__caption
+  display: flex
+
+  li
+    padding: 10px 20px
+    font-size: 18px
+    font-weight: 400
+    cursor: pointer
+    margin-right: 29px
+
+    &.active
+      color: $color-button
+
+    a
+      text-decoration: none
+      color: unset
