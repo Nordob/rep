@@ -102,35 +102,41 @@ export default $root => {
 
     initButtons() {
       this.$root.find('.product__more').on("click", () => {
+        if (typeof this.saucePrice === 'undefined'){
+          this.saucePrice = 0;
+        }
         this.count += 1;
         this.$input.val(this.count);
-        this.$price.html(this.count * this.price + parseInt(this.number * this.saucePrice));
+        this.$price.html((this.count * this.price) + (this.number * this.saucePrice));
       });
 
       this.$root.find('.product__less').on("click", () => {
+        if (typeof this.saucePrice === 'undefined'){
+          this.saucePrice = 0;
+        }
         this.count = this.count > 1 ? this.count - 1 : 1;
         this.$input.val(this.count);
-        this.$price.html(this.count * this.price + parseInt(this.number * this.saucePrice));
+        this.$price.html((this.count * this.price) + (this.number * this.saucePrice));
       });
 
       this.$root.find('.product__cancellation').on("click", () => {
         this.$countSupplements.html(this.number = 0);
         this.$sauce.html(0);
-        this.$price.html(this.count * this.price + parseInt(this.number * this.saucePrice));
+        this.$price.html((this.count * this.price) + (this.number * this.saucePrice));
       });
 
       this.$root.find('.product__add').on("click", () => {
         this.number += 1;
         this.$countSupplements.html(this.number);
         this.$sauce.html(this.number * this.saucePrice);
-        this.$price.html(this.count * this.price + parseInt(this.number * this.saucePrice));
+        this.$price.html((this.count * this.price) + (this.number * this.saucePrice));
       });
 
       this.$root.find('select').on('change', () => {
         this.saucePrice = this.$select.find('option:selected').attr('data-pricesause');
         this.$countSupplements.html(this.number = 0);
         this.$sauce.html(0);
-        this.$price.html(this.count * this.price + parseInt(this.number * this.saucePrice));
+        this.$price.html((this.count * this.price) + (this.number * this.saucePrice));
       });
     }
   }

@@ -6816,6 +6816,11 @@ tablet@0.0.0:
   resolved "https://registry.yarnpkg.com/tablet/-/tablet-0.0.0.tgz#e2c9d7a54b86925958969b0a79ff153da9077b48"
   integrity sha1-4snXpUuGkllYlpsKef8VPakHe0g=
 
+tabslet@^1.7.3:
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/tabslet/-/tabslet-1.7.3.tgz#b105873976cb1db4afce366dc391e094f0479818"
+  integrity sha1-sQWHOXbLHbSvzjZtw5HglPBHmBg=
+
 tapable@^1.0.0, tapable@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.1.0.tgz#0d076a172e3d9ba088fd2272b2668fb8d194b78c"
