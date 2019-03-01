@@ -1,48 +1,52 @@
+include  /blocks/dignity/dignity
+
 .motivation
   .container
+    .title 10 причин купить у нас
     .motivation__list
       -
         var motivation = [
         {
-          image: '',
-          text: ''
+          image: 'images/dignity_kitchen.png',
+          text: '100% ручная работа'
         },
         {
-          image: '',
-          text: ''
+          image: 'images/dignity_dish.png',
+          text: '100% свежие ингредиенты'
         },
         {
-          image: '',
-          text: ''
+          image: 'images/dignity_money.png',
+          text: 'Самые низкие цены на рынке! (Нет ресторанной наценки)'
         },
         {
-          image: '',
-          text: ''
+          image: 'images/dignity_like.png',
+          text: 'Постоянный контроль качества на всех этапах'
         },
         {
-          image: '',
-          text: ''
+          image: 'images/dignity_fish.png',
+          text: 'Только охлажденная рыба (никакой заморозки)'
         },
         {
-          image: '',
-          text: ''
+          image: 'images/dignity_rice.png',
+          text: 'Мы используем только дорогой рис из Японии'
         },
         {
-          image: '',
-          text: ''
+          image: 'images/dignity_octopus.png',
+          text: 'Больше начинки, меньше риса!'
         },
         {
-          image: '',
-          text: ''
+          image: 'images/dignity_knife.png',
+          text: 'Мы не заменяем авокадо огурцом!'
         },
         {
-          image: '',
-          text: ''
+          image: 'images/dignity_pizza.png',
+          text: 'Вся пицца готовится из итальянской муки и Итальянского соуса'
         },
         {
-          image: '',
-          text: ''
+          image: 'images/dignity_feather.png',
+          text: 'Мы не используем майонез!'
         }
         ]
       each onemotivation in motivation
         li.motivation__item
+          +dignityCard(onemotivation)

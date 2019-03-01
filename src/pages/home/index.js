@@ -7,6 +7,8 @@ import  initPizza from './pizza'
 import  initWok from './wok'
 import initAction from  './action'
 import initMotivation from  './motivation'
+import initComment from  './comment'
+import initContact from './contact'
 import Swiper from "swiper/dist/js/swiper.min";
 import 'swiper/dist/css/swiper.min.css';
 import "tabslet/jquery.tabslet.min";
@@ -45,6 +47,16 @@ export default $root => {
   let $motivation = $root.find('.motivation');
   if($motivation.length){
     initMotivation($motivation)
+  }
+
+  let $comment = $root.find('.comment');
+  if($comment.length){
+    initComment($comment)
+  }
+
+  let $contact = $root.find('.contact');
+  if($contact.length){
+    initContact($contact)
   }
 
   $root.find('.swiper__section').each((i, elem) => {

@@ -1,0 +1,58 @@
+include /blocks/impression/index
+
+.comment
+  .container
+    .title Отзывы
+    .comment__content
+      -
+        var comments = [
+          {
+            photouser: 'images/impression_user.png',
+            name: 'Надежда Наширбанова',
+            date: {
+              number: '5',
+              mount: 'авг',
+              year: '2017',
+              time: '9:58'
+            },
+            desc: 'Спасибо за быструю доставку! Отличный поздний ужин после рабочего дня )',
+            photo: 'images/impression_product.png',
+            like: '12',
+            comment: '2',
+            repost: '5'
+          },
+          {
+            photouser: 'images/impression_user.png',
+            name: 'Надежда Наширбанова',
+            date: {
+              number: '5',
+              mount: 'авг',
+              year: '2017',
+              time: '9:58'
+            },
+            desc: 'Спасибо за быструю доставку! Отличный поздний ужин после рабочего дня )',
+            photo: 'images/impression_product.png',
+            like: '',
+            comment: '2',
+            repost: ''
+          },
+          {
+            photouser: 'images/impression_user.png',
+            name: 'Надежда Наширбанова',
+            date: {
+              number: '5',
+              mount: 'авг',
+              year: '2017',
+              time: '9:58'
+            },
+            desc: 'Спасибо за быструю доставку! Отличный поздний ужин после рабочего дня )',
+            photo: 'images/impression_product.png',
+            like: '',
+            comment: '2',
+            repost: ''
+          }
+
+        ]
+      each onecomment in comments
+       .comment__item
+         +impressionCard(onecomment)
