@@ -356,3 +356,52 @@
   font-size: 12px
   font-weight: 400
 
+.info
+  padding-top: 70px
+
+.info__title
+  margin: 75px 0 40px
+  color: $color-title
+  font-family: 'OpenSans'
+  font-size: 24px
+  font-weight: 700
+
+.info__content
+  position: relative
+  margin-bottom: 150px
+
+  &::before
+    content: ' '
+    position: relative
+    float: right
+    display: block
+    width: 277px
+    height: 478px
+    margin: 0 0 30px 58px
+
+.info__img
+  position: absolute
+  top: 0
+  right: 0
+  width: 277px
+  height: 478px
+  background-image: url("./info_img.png")
+  background-repeat: no-repeat
+  border-radius: 10px
+
+.info__desc
+  margin-bottom: 25px
+  color: #4d4d4d
+  font-family: 'OpenSans'
+  font-size: 14px
+  font-weight: 400
+  line-height: 20px
+
+  &:nth-child(6)
+    display: none
+
+  &:nth-child(7)
+    display: none
+
+
+

@@ -9,6 +9,7 @@ import initAction from  './action'
 import initMotivation from  './motivation'
 import initComment from  './comment'
 import initContact from './contact'
+import initInfo from './info'
 import Swiper from "swiper/dist/js/swiper.min";
 import 'swiper/dist/css/swiper.min.css';
 import "tabslet/jquery.tabslet.min";
@@ -57,6 +58,11 @@ export default $root => {
   let $contact = $root.find('.contact');
   if($contact.length){
     initContact($contact)
+  }
+
+  let $info = $root.find('.info');
+  if($info.length){
+    initInfo($info);
   }
 
   $root.find('.swiper__section').each((i, elem) => {
